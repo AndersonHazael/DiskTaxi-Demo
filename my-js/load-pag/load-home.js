@@ -1,3 +1,3 @@
 function home(){
-    $("#home").load("./html/sections/home.html");
+    $("#home").load("/html/sections/home.html");
 }
