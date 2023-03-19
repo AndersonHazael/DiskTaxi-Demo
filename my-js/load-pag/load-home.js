@@ -1,3 +1,3 @@
 function home(){
-    $("#home").load("/DiskTaxi-Demo/html/sections/home.html");
+    $("#home").load("https://andersonhazael.github.io/DiskTaxi-Demo/html/sections/home.html");
 }
