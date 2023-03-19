@@ -1,0 +1,79 @@
+:root{
+    --main-bg-color: #059669;
+    --main-bg-hover: #06be84;
+    --second-button-color: white;
+    --tree-button-color: rgb(212, 212, 212);
+    --text-main-color:rgb(78, 82, 78); 
+}
+
+/* BACKGROUNDs */
+.bg-main{
+    background-color: var(--main-bg-color);
+}
+.bg-secondary{
+    background-color: var(--main-bg-hover)
+}
+.myborder{
+    border: 2px solid var(--main-bg-color);
+}
+.myborder-two{
+    border: 2px solid var(--main-bg-color);
+    border-top: none;
+}
+
+/* TEXT */
+.text-main{
+    color: var(--text-main-color);
+}
+.text-secondary{
+    color: var(--main-bg-color);
+} 
+
+.title{
+    color: var(--main-bg-color)
+}
+
+
+/* LINKS */
+.link-main{
+     color: var(--text-main-color);
+}
+.link-main:hover {
+    color: var(--main-bg-color);
+}
+
+
+/* BUTTONS */
+.button-main{
+    background-color: var(--main-bg-color);
+}
+.button-main:hover{
+    background-color: var(--main-bg-hover);
+}
+.button-secondary{
+    color: var(--text-main-color);
+    background-color: var(--second-bg-hover);
+}
+.button-secondary:hover{
+    color: var(--main-bg-color);
+}
+
+
+
+
+*{
+    margin: 0;
+    padding:0;   
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+#btnOpen, #btnClose{
+
+    cursor: pointer;
+   
+}
+

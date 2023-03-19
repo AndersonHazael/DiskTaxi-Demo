@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disktáxi | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- MY-CSS -->
+    <link rel="stylesheet" href="my-css/index.css">
+    <link rel="stylesheet" href="my-css/animation/keyframe.css">
+    <link rel="stylesheet" href="my-css/media-query.css">
+
+    <!--JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <!-- MY-JS -->
+    <script src="my-js/pags/about.js"></script>
+    <script src="my-js/pags/navbar-lateral.js"></script>
+
+    <script src="my-js/load-pag/load-home.js"></script>
+    <script src="my-js/load-pag/load-popup.js"></script>
+    <script src="my-js/load-pag/load-about.js"></script>
+    <script src="my-js/load-pag/load-prices.js"></script>
+    
+</head>
+
+<body class="bg-gray-100">
+
+    <!--NAVBARS-->
+    <header class="font-sans text-md text-gray-600">
+        <!--NAVBAR WEB-->   
+        <nav id="navbar" class="w-full h-20 bg-white shadow-md fixed flex justify-around items-center z-50">
+            <!-- LOGO -->
+            <img src="/img/logo.png" class="ml-10 flex flex-row rounded-lg" style="width:138px; height:40px;">
+            <!-- ITEMS -->
+                <ul id="list" class="md:flex w-3/5 flex mx-20 flex-row font-semibold text-sm space-x-8 ">
+                    <li class="link-main"><a href="#home">Início</a></li>
+                    <li class="link-main"><a href="#about">Sobre</a></li>
+                    <li class="link-main"><a href="#prices">Promoções</a></li>
+                    <li class="link-main"><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <!--BUTTONS-->
+            <div class="flex  items-center mr-10">
+            <button id="btnPopup" class="link-main flex flex-row font-semibold decoration-solid"><span class="mr-1.5">simular</span>corrida</button>
+
+            <button id="app" class="button-main ml-6 py-2 pr-4 pl-2 flex flex-row rounded-md text-white uppercase hover:scale-110 transition duration-500"><span class="material-symbols-outlined mr-2">download</span>Aplicativo</button>    
+            </div>
+        </nav>
+
+
+        <!-- NAVBAR MOBILE-->
+        <nav id="navbar-mobile" class="hidden h-20 bg-white drop-shadow-md fixed z-50 mt-0" style="width: 100vw;">
+            <!-- LOGO -->   
+            <div class="w-full flex justify-center z-40"> 
+                <!-- OPEN MENU / EXIT MENU-->
+                <span class="flex items-center w-8/12 justify-end">
+                    <span id="btnOpen" class="material-symbols-outlined scale-150 text-gray-500" onclick="openMenu();">menu</span>
+                    <span id="btnClose" class="material-symbols-outlined scale-150 text-gray-500 hidden" 
+                    onclick="exitMenu();">close</span> 
+                </span>
+            </div>    
+            <!-- BARRA LATERAL -->
+            <div id="menuLateral" class="bg-white z-30 text-sm shadow-xl mt-16 absolute right-0 flex justify-center translate-x-full" style="width:70vw; height:100vh">
+                <ul id="list" class="w-full items-center flex-col w-3/5 flex font-semibold justify-around mb-28 mt-5">
+                    <!--buttons-->
+                    <span class="w-full flex flex-col justify-center items-center text-center mx-0 my-0 space-y-4">
+                        
+                        <button id="app-mobile" class="button-main p-2 text-lg flex justify-center items-center sapce-x-4 rounded-md text-white font-medium uppercase hover:scale-110 transition duration-500"><span class="material-symbols-outlined mr-2">download</span>Aplicativo</button> 
+                        
+                        
+                        
+                        <button class=" text-base hover:underline decoration-solid" onclick="openPopup()">Simular corrida</button>
+                    </span>
+                    <!--items-->
+                    <li class="link-main"><a href="#home">Início</a></li>
+                    <!--<li class="link-main"><a href="#about">Sobre</a></li>-->
+                    <li class="link-main"><a href="#prices">Promoções</a></li>
+                    <li class="link-main"><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-gray-50 w-screen" id="main">      
+
+        <div id="PopupScreen" class="hidden w-screen h-screen fixed flex justify-center items-center" style="background-color: rgba(0, 0, 0, 0.712); z-index: 50;"><script>popup();</script></div> 
+
+        <div id="home">
+            <script defer>home();</script><br> 
+        </div>
+        <div id="about" class="bg-gray-100 w-full h-screen">
+            <script defer>about();</script>
+
+        </div>
+        <div id="prices" class="bg-gray-200 w-full h-screen ">     
+            <script defer>prices();</script>
+        </div>
+        <div id="contact" class="bg-emerald-700 w-screen">
+            <div class="w-full flex items-center justify-center py-6">
+            <h1 class="text-xl font-semibold uppercase text-white">Contate-nos</h1>
+            </div>
+            <div id="box-contact" class="w-full flex text-white justify-around py-6">
+                <span id="display" class="space-y-8">
+                    <h1>Nossos Telefones:</h1>
+                    <p>(83) 3223-1700 (Oi)<br> (83) 3208-1700 (Oi)</p>
+                    <h1>Táxi WhatsApp</h1>
+                    <p>(83) 8140-1700 (Vivo)</p>
+                </span>
+                <span id="display" class="space-y-8">
+                    <h1>Endereço:</h1>
+                    <p>Rua de Humberto Paiva<br> de Carvalho, 176</p>
+                    <p>cristo redentor</p>
+                    <p>João Pessoa - PB</p>
+                </span>
+                <span class="space-y-8">
+                    <h1>Entre em Contato:</h1>
+                    <p>disktaxi@disktaxi.com</p>
+                </span>
+            </div>
+        </div>
+    </main>
+</body>
+<script defer src="my-js/popup/script.js"></script>
+</html>

@@ -1,0 +1,105 @@
+@media(max-width: 1024px){
+
+/*GLOBAIS */   
+   body{
+      overflow-x: hidden;
+   }
+   
+   #none{
+      display: none;
+   }
+/*NAVBAR*/   
+   #navbar{
+      display: none;
+   }
+   #navbar-mobile{
+      display: flex;
+   }
+
+/* SECTIONS */
+   div#about{
+      display: none;
+   }
+   div#prices{
+      background-color: white;
+   }
+
+
+/*CABEÇALHO HOME*/
+
+   #gallery-description{
+     display: none;
+   }
+ 
+   #text-box{
+      left:50%;
+      right:50%;
+      width:80%;
+      height:40%;
+      padding:0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   #text-box h1{
+      font-weight: 400;
+      font-size: 1.5rem;
+
+   }
+
+   /* HOME */
+   #phoneText{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      margin-left: 5%;
+      margin-right: 5%;
+   }
+   #mapText{
+      width:100%;
+      align-items: center ;
+      text-align: center;
+      margin-left: auto;
+      margin-top: auto;
+   }
+
+   /* PRICES */
+   #textBox-prices{
+      margin:0;
+      width:100vw;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+   /* CONTACT */
+   #box-contact{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   #display{
+      border-bottom: solid 1px white;
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      padding-bottom: 3%;
+   }
+
+   /* POPUP */
+
+   #PopupImg{
+      display: none;
+   }
+   #PopupText{
+      width:100%;
+   }
+   #box-popup{
+      width: 80%;
+   }
+}
