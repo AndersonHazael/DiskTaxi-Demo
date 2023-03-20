@@ -1,3 +1,3 @@
 function popup(){
-    $("#PopupScreen").load("/html/obj/popup.html");
+    $("#PopupScreen").load("https://andersonhazael.github.io/DiskTaxi-Demo/html/obj/popup.html");
 }
