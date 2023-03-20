@@ -1,5 +1,5 @@
 function about(){
 
-    $("#about").load("/html/sections/about.html");
+    $("#about").load("https://andersonhazael.github.io/DiskTaxi-Demo/html/sections/about");
 
 }
