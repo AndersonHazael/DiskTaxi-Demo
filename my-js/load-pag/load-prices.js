@@ -1,3 +1,3 @@
 function prices(){
-    $("#prices").load("/html/sections/prices.html");
+    $("#prices").load("https://andersonhazael.github.io/DiskTaxi-Demo/html/sections/prices");
 }
